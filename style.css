@@ -1,0 +1,183 @@
+/* geral */
+* {
+  padding: 0; /* Remove o espaçamento interno de todos os elementos */
+  margin: 0; /* Remove a margem externa de todos os elementos */
+  font-family: georgia; /* Define a fonte padrão para Georgia */
+}
+.blog {
+
+  height: 40px;
+  font-size: 40px;
+
+  padding: 10px;
+  text-align: center;
+  color: blue;
+  box-shadow: 10px 5px 10px 10px #ecebeb;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none; /* Remove os marcadores de lista (bolinhas, números) das listas não ordenadas */
+}
+
+a {
+  font-size: 1.4rem;
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  color: #4b4848; /* Define a cor padrão dos links para um cinza escuro */
+  transition: 0.4s; /* Adiciona uma transição suave de 0.4 segundos para mudanças de estilo */
+}
+
+a:hover {
+  color: #153e68; /* Define a cor do link quando o mouse passa por cima para um azul */
+}
+
+/* navbar */
+#navbar {
+  padding: 1.5rem 2.5rem; /* Define o espaçamento interno superior e inferior como 1.5rem e nas laterais como 2.5rem */
+  border-bottom: 2px solid #ddd; /* Adiciona uma borda inferior de 2 pixels sólida com a cor cinza claro #ddd */
+}
+
+#navbar-inner {
+  display: flex; /* Usa o modelo de layout Flexbox para organizar os elementos internos */
+  justify-content: space-between; /* Espaça os elementos internos horizontalmente, colocando o máximo de espaço possível entre eles */
+  align-items: center; /* Alinha os elementos internos verticalmente ao centro */
+  max-width: 1200px; /* Define a largura máxima do container interno em 1200 pixels */
+  margin: 0 auto; /* Centraliza o container horizontalmente na página */
+}
+
+#links {
+  display: flex; /* Usa o modelo de layout Flexbox para organizar os links */
+  gap: 1rem; /* Define um espaçamento de 1rem entre os itens flexíveis (os links) */
+}
+
+/* conteudo principal */
+.container {
+  display: flex; /* Usa o modelo de layout Flexbox para organizar os elementos filhos (barra lateral e posts) */
+  gap: 3rem; /* Define um espaçamento de 3rem entre os elementos filhos */
+  padding: 2rem 2.5rem; /* Define o espaçamento interno superior e inferior como 2rem e nas laterais como 2.5rem */
+  max-width: 1200px; /* Define a largura máxima do container em 1200 pixels */
+  margin: 0 auto; /* Centraliza o container horizontalmente na página */
+}
+
+#posts-container {
+  flex: 3 1 0; /* Define as propriedades flex: [flex-grow] [flex-shrink] [flex-basis]. O container de posts vai ocupar 3 partes do espaço disponível, pode diminuir se necessário e tem um tamanho base de 0 */
+}
+
+.post {
+  margin-bottom: 2.5rem; /* Adiciona uma margem inferior de 2.5rem entre os posts */
+}
+
+img {
+  width: 100%; /* Faz com que a largura da imagem seja sempre 100% do seu container pai, tornando-a responsiva */
+  margin-bottom: 1rem; /* Adiciona uma margem inferior de 1rem abaixo da imagem */
+}
+
+.titulo,
+.descricao,
+.autor {
+  font-size: 1.5rem;
+  margin-bottom: 1rem; /* Adiciona uma margem inferior de 1rem abaixo do título, descrição e autor */
+}
+
+.titulo {
+  font-size: 2rem; /* Define o tamanho da fonte do título para 2rem */
+}
+
+.autor {
+  color: #444; /* Define a cor do texto do autor para um cinza escuro */
+  font-weight: bold; /* Define o texto do autor como negrito */
+}
+
+/* barra lateral */
+#sidebar {
+  flex: 1 1 0; /* Define as propriedades flex: [flex-grow] [flex-shrink] [flex-basis]. A barra lateral vai ocupar 1 parte do espaço disponível, pode diminuir se necessário e tem um tamanho base de 0 */
+}
+
+#seach-bar,
+#categorias,
+#tags {
+  background-color: rgb(2, 2, 2);
+  padding: 1.5rem; /* Define um espaçamento interno de 1.5rem para a barra de pesquisa, categorias e tags */
+  border: 1px solid #ddd; /* Adiciona uma borda de 1 pixel sólida com a cor cinza claro #ddd */
+  margin-bottom: 1rem; /* Adiciona uma margem inferior de 1rem para separar as seções da barra lateral */
+}
+
+#seach-bar h4,
+#categorias h4,
+#tags h4 {
+  color: #11db87b2;
+  margin-bottom: 1.5rem; /* Adiciona uma margem inferior de 1.5rem abaixo dos títulos das seções da barra lateral */
+  font-size: 1.6rem; /* Define o tamanho da fonte dos títulos das seções da barra lateral para 1.6rem */
+}
+
+#seach-bar form {
+  display: flex; /* Usa o modelo de layout Flexbox para organizar os elementos do formulário de pesquisa */
+}
+
+#seach-bar input {
+  padding: 0.5rem 1rem; /* Define o espaçamento interno superior e inferior como 0.5rem e nas laterais como 1rem para os campos de entrada */
+  border: 1px solid #ddd; /* Adiciona uma borda de 1 pixel sólida com a cor cinza claro #ddd aos campos de entrada */
+}
+
+#seach-bar input[type="submit"] {
+  cursor: pointer; /* Altera o cursor para uma mãozinha ao passar por cima do botão de submit, indicando que é clicável */
+  background-color: #37a1f7; /* Define a cor de fundo do botão de submit para azul */
+  color: #fff; /* Define a cor do texto do botão de submit para branco */
+  border: none; /* Remove a borda padrão do botão de submit */
+}
+/* h2 catgorias */
+h2{
+    color: #444;
+    font-size: 30px;
+ line-height: 60px;
+}
+#categorias li {
+  margin-bottom: 1rem; /* Adiciona uma margem inferior de 1rem entre os itens da lista de categorias */
+}
+
+#tags-container {
+  display: flex; /* Usa o modelo de layout Flexbox para organizar as tags */
+  flex-wrap: wrap; /* Permite que as tags quebrem para a próxima linha se não houver espaço suficiente */
+  gap: 0.5rem; /* Define um espaçamento de 0.5rem entre as tags */
+}
+
+#tags-container a {
+  background-color: #0c0b0b; /* Define a cor de fundo dos links de tag para um preto bem escuro */
+  color: #fff; /* Define a cor do texto dos links de tag para branco */
+  padding: 0.5rem 0.7rem; /* Define o espaçamento interno superior e inferior como 0.5rem e nas laterais como 0.7rem para os links de tag */
+  border-radius: 0.3rem; /* Adiciona bordas arredondadas com um raio de 0.3rem aos links de tag */
+}
+#tags-container a:hover{
+    transition: 0.5s;
+    color: rgb(3, 62, 117);
+}
+
+/* rodapé */
+#footer {
+    background-color: black;
+    color: #fff;
+    font-size: 1.5rem;
+  border: 2px solid #ddd; /* Adiciona uma borda de 2 pixels sólida com a cor cinza claro #ddd ao rodapé */
+  padding: 3rem; /* Define um espaçamento interno de 3rem para o rodapé */
+  text-align: center; /* Centraliza o texto dentro do rodapé */
+}
+
+#footer h2,
+#footer p {
+  margin-bottom: 1rem; /* Adiciona uma margem inferior de 1rem abaixo do título e do parágrafo no rodapé */
+}
+.copy{
+    color: #153e68;
+}
+
+/* responsivo */
+@media (max-width: 450px) {
+  .container {
+    flex-wrap: wrap; /* Em telas com largura máxima de 450 pixels, permite que os itens do container (barra lateral e posts) quebrem para a próxima linha, tornando o layout de uma coluna */
+  }
+  .blog {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin: 6px;
+  }
+}
